@@ -1,0 +1,17 @@
+
+<label for="inputType">Select Input Type:</label>
+<select id="inputType" [(ngModel)]="selectedInputType">
+  <option value="textbox">Textbox</option>
+  <option value="textarea">Textarea</option>
+</select>
+
+<div *ngIf="selectedInputType === 'textbox'">
+    <label for="textbox">Textbox:</label>
+    <input type="text" id="textbox" [(ngModel)]="textboxValue" />
+  </div>
+  
+  <div *ngIf="selectedInputType === 'textarea'">
+    <label for="textarea">Textarea:</label>
+    <textarea id="textarea" [(ngModel)]="textareaValue"></textarea>
+  </div>
+  
